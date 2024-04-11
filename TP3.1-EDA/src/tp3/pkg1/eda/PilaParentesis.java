@@ -26,22 +26,22 @@ public class PilaParentesis {
         }
     }
     
-    public boolean verificarEquilibrio(){
-        boolean equilibrio = true;
-        int tamAbierto = 0;
-        int tamCerrado = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == "[" || array[i] == "{" || array[i] == "(" || array[i] == "<") {
-                tamAbierto ++;
-            }
-            if (array[i] == "]" || array[i] == "}" || array[i] == ")" || array[i] == ">") {
-                tamCerrado ++;
-            }
-        }
-        if (!(tamAbierto == tamCerrado)) {
-            return false;
-        }
-        
-    }
+//    public boolean verificarEquilibrio(){
+//        boolean equilibrio = true;
+//        int tamAbierto = 0;
+//        int tamCerrado = 0;
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] == "[" || array[i] == "{" || array[i] == "(" || array[i] == "<") {
+//                tamAbierto ++;
+//            }
+//            if (array[i] == "]" || array[i] == "}" || array[i] == ")" || array[i] == ">") {
+//                tamCerrado ++;
+//            }
+//        }
+//        if (!(tamAbierto == tamCerrado)) {
+//            return false;
+//        }
+//        
+//    }
     
 }

@@ -4,34 +4,57 @@
  */
 package tp3.pkg1.eda;
 
-import java.util.Stack;
+import java.util.ArrayList;
 
 /**
  *
  * @author pablo
  */
 public class Pila {
-    private Stack<Integer> stack = new Stack<> ();
-    private Stack<Integer> stackAux = new Stack<> ();
+    private ArrayList<Integer> pila;
+
+    private int tope = -1;
 
     public Pila() {
+        this.pila = new ArrayList<>();
     }
-  
-    public void insertarElementoOrdenado(int n){
-        while (!stack.isEmpty() && stack.peek() > n) {
-            stackAux.push(stack.pop());
-        }
-        stack.push(n);
-        while (!stackAux.isEmpty()) {
-            stack.push(stackAux.pop());
+
+    public int getTope() {
+        return tope;
+    }
+    
+    public void push(int num){
+        if (!pilaLlena()) {
+            tope ++;
+            pila.add(tope, num);
         }
     }
     
-    public void mostrar(){
-        System.out.println("Lista elementos");
-        for (int n :stack){
-            System.out.print(n + ",");
+    public void pop(){
+        if (!isEmpty()) {
+            pila.remove(tope);
+            tope --;
         }
+    }
+    
+    public boolean isEmpty(){
+        if (tope == -1) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public boolean pilaLlena(){
+        if (tope == pila.size()-1) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public int peek(){
+            return pila.get(tope);  
     }
     
 }
