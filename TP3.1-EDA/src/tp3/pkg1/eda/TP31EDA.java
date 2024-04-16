@@ -13,21 +13,27 @@ public class TP31EDA {
 
      */
     public static void main(String[] args) {
-//    PilaOrdenada pila = new PilaOrdenada();  
+    PilaOrdenada pila = new PilaOrdenada();  
     
-    PilasUnidas pila = new PilasUnidas();
+    PilasUnidas pila1 = new PilasUnidas();
 
         
-//    pila.insertarElementoOrdenado(1);
-//    pila.insertarElementoOrdenado(4);
-//    pila.insertarElementoOrdenado(3);
-//    pila.insertarElementoOrdenado(2);
-//    pila.insertarElementoOrdenado(5);  
-    pila.llenarPilas();
+    pila.insertarElementoOrdenado(1);
+    pila.insertarElementoOrdenado(4);
+    pila.insertarElementoOrdenado(3);
+    pila.insertarElementoOrdenado(2);
+    pila.insertarElementoOrdenado(5);  
 
+   
+    System.out.println("Ejercicio A: ");
     pila.mostrar();
-
     
+    System.out.println("");
+   
+    System.out.println("Ejercicio D");
+    pila1.llenarPilas();
+    pila1.insertarElementosPilaTotal();
+    pila1.mostrar();
     }
     
 }
