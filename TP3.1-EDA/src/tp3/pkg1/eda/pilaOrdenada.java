@@ -26,17 +26,15 @@ public class PilaOrdenada {
         }
         pila.push(n);
         while (!pilaAux.isEmpty()) {
-            pilaAux.push(pila.peek());
-            pila.pop();
+            pila.push(pilaAux.peek());
+            pilaAux.pop();
         }
     }
     
     public void mostrar(){
         if (!pila.isEmpty()){
             System.out.println("Lista elementos");
-            for (int i = 0; i < pila.getTope();i++){
-                System.out.print(pila.peek() + ",");
-            }
+            pila.mostrar();
         }        
     }
     

@@ -54,7 +54,12 @@ public class Pila {
     }
     
     public int peek(){
-            return pila.get(tope);  
+        return pila.get(tope);  
     }
     
+    public void mostrar(){
+        for (int i = 0; i < tope; i++) {
+            System.out.println(pila.get(i));
+        }
+    }
 }
