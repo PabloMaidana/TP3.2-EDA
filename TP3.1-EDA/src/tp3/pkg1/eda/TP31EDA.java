@@ -13,19 +13,20 @@ public class TP31EDA {
 
      */
     public static void main(String[] args) {
-        PilaOrdenada pila = new PilaOrdenada();  
-        pila.insertarElementoOrdenado(1);
-        pila.insertarElementoOrdenado(4);
-        pila.insertarElementoOrdenado(3);
-        pila.insertarElementoOrdenado(2);
-        pila.insertarElementoOrdenado(5);      
+//    PilaOrdenada pila = new PilaOrdenada();  
+    
+    PilasUnidas pila = new PilasUnidas();
+
         
-        pila.mostrar();
-//
-//    String cadena = "[]{)(}";
-//    PilaParentesis pilaCadena = new PilaParentesis(cadena);
-//    pilaCadena.mostrar();
-//    
+//    pila.insertarElementoOrdenado(1);
+//    pila.insertarElementoOrdenado(4);
+//    pila.insertarElementoOrdenado(3);
+//    pila.insertarElementoOrdenado(2);
+//    pila.insertarElementoOrdenado(5);  
+    pila.llenarPilas();
+
+    pila.mostrar();
+
     
     }
     

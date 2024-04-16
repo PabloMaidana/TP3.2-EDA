@@ -4,8 +4,6 @@
  */
 package tp3.pkg1.eda;
 
-import java.util.Stack;
-
 /**
  *
  * @author pablo

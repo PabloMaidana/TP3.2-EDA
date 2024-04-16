@@ -24,10 +24,8 @@ public class Pila {
     }
     
     public void push(int num){
-        if (!pilaLlena()) {
             tope ++;
             pila.add(tope, num);
-        }
     }
     
     public void pop(){
@@ -39,14 +37,6 @@ public class Pila {
     
     public boolean isEmpty(){
         if (tope == -1) {
-            return true;
-        }else{
-            return false;
-        }
-    }
-    
-    public boolean pilaLlena(){
-        if (tope == pila.size()-1) {
             return true;
         }else{
             return false;
