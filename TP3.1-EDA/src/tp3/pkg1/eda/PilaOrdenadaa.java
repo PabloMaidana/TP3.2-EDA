@@ -8,12 +8,12 @@ package tp3.pkg1.eda;
  *
  * @author pablo
  */
-public class PilaOrdenada {
+public class PilaOrdenadaa {
     private Pila pila ;
     private Pila pilaAux = new Pila();
     
     
-    public PilaOrdenada() {
+    public PilaOrdenadaa() {
         this.pila = new Pila();
     }
   

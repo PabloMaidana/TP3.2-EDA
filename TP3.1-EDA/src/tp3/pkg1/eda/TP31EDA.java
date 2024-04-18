@@ -13,7 +13,7 @@ public class TP31EDA {
 
      */
     public static void main(String[] args) {
-    PilaOrdenada pila = new PilaOrdenada();  
+    PilaOrdenadaa pila = new PilaOrdenadaa();  
     
     PilasUnidas pila1 = new PilasUnidas();
 
