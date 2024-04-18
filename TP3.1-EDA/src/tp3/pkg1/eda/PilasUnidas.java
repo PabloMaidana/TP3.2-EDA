@@ -37,31 +37,31 @@ public class PilasUnidas {
     public void insertarElementosPilaTotal(){
         while (!pila1.isEmpty() && !pila2.isEmpty()) {
             if (pila1.peek() >= pila2.peek()) {
-                insertarElementoOrdenado(pila1.peek(),pilaTotal);
+                insertarElementoOrdenado(pila1.peek(),pilaTotal,pila2);
                 pila1.pop();
             }else{
-                insertarElementoOrdenado(pila2.peek(),pilaTotal);
+                insertarElementoOrdenado(pila2.peek(),pilaTotal,pila1);
                 pila2.pop();
             }
         }
         while(!pila1.isEmpty()){
-              insertarElementoOrdenado(pila1.peek(),pilaTotal);
+              insertarElementoOrdenado(pila1.peek(),pilaTotal,pila2);
               pila1.pop();
         }
         while(!pila2.isEmpty()){
-              insertarElementoOrdenado(pila2.peek(),pilaTotal);
+              insertarElementoOrdenado(pila2.peek(),pilaTotal,pila1);
               pila2.pop();
         }    
     }
     
-    public void insertarElementoOrdenado(int n,Pila pila){
-        Pila pilaAux = new Pila();
+    public void insertarElementoOrdenado(int n,Pila pila,Pila pilaAux){
+        int tope = pilaAux.getTope();
         while (!pila.isEmpty() && pila.peek() < n) {
             pilaAux.push(pila.peek());
             pila.pop();
         }
         pila.push(n);
-        while (!pilaAux.isEmpty()) {
+        while (pilaAux.getTope() != tope) {
             pila.push(pilaAux.peek());
             pilaAux.pop();
         }

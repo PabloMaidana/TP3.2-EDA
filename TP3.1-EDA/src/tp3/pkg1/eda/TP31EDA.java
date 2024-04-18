@@ -24,6 +24,7 @@ public class TP31EDA {
     pila.insertarElementoOrdenado(2);
     pila.insertarElementoOrdenado(5);  
 
+    // Mostrar()-- Muestra los numeros de abajo hacia arriba de la pila
    
     System.out.println("Ejercicio A: ");
     pila.mostrar();
